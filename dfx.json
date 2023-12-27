@@ -1,0 +1,43 @@
+{
+  "canisters": {
+    "backend": {
+      "dependencies": ["vetkd_system_api"],
+      "main": "src/backend/main.mo",
+      "type": "motoko"
+    },
+    "frontend": {
+      "dependencies": [
+        "backend",
+        "vetkd_system_api",
+        "internet_identity"
+      ],
+      "frontend": {
+        "entrypoint": "src/frontend/dist/index.html"
+      },
+      "source": ["src/frontend/dist"],
+      "type": "assets"
+    },
+    "vetkd_system_api": {
+      "type": "custom",
+      "candid": "src/vetkd/vetkd_system_api.did",
+      "wasm": "src/vetkd/vetkd_system_api.wasm"
+    },
+    "internet_identity": {
+      "type": "custom",
+      "candid": "src/internet_identity/internet_identity_dev.did",
+      "wasm": "src/internet_identity/internet_identity_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      }
+    }
+  },
+  "output_env_file": "src/frontend/.env",
+  "version": 1,
+  "defaults": {
+    "build": {
+      "packtool": "mops sources"
+    }
+  }
+}

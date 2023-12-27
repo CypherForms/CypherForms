@@ -1,0 +1,10 @@
+{
+  "[motoko]": {
+    "editor.defaultFormatter": "dfinity-foundation.vscode-motoko",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "editor.formatOnSave": true
+}
