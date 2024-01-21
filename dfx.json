@@ -5,19 +5,6 @@
       "main": "src/backend/main.mo",
       "type": "motoko"
     },
-    "frontend": {
-      "dependencies": [
-        "backend",
-        "vetkd_system_api",
-        "internet_identity"
-      ],
-      "frontend": {
-        "entrypoint": "src/frontend/dist/index.html"
-      },
-      "source": ["src/frontend/dist"],
-      "type": "assets"
-    },
-    "vetkd_system_api": {
       "type": "custom",
       "candid": "src/vetkd/vetkd_system_api.did",
       "wasm": "src/vetkd/vetkd_system_api.wasm"
