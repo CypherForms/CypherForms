@@ -5,10 +5,6 @@
       "main": "src/backend/main.mo",
       "type": "motoko"
     },
-      "type": "custom",
-      "candid": "src/vetkd/vetkd_system_api.did",
-      "wasm": "src/vetkd/vetkd_system_api.wasm"
-    },
     "internet_identity": {
       "type": "custom",
       "candid": "src/internet_identity/internet_identity_dev.did",
