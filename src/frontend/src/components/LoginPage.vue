@@ -1,7 +1,6 @@
 <template>
   <div class="flex min-h-screen flex-col py-6">
     <h1 class="mb-6 text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-      Please Login
     </h1>
     <div class="text-center">
       <button v-if="!authStore.actor" type="button" @click="login"
@@ -11,6 +10,8 @@
     </div>
   </div>
 </template>
+      Please Login to access the app
+
 
 <script setup lang="ts">
 import { useAuthStore } from '@/stores/authStore'
