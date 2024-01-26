@@ -1,11 +1,11 @@
 <template>
   <div class="flex min-h-screen flex-col py-6">
-    <h1 class="mb-6 text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <h1 class="mb-6 text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl   class="rounded-md bg-highlight px-3.5 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-dullhighlight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-highlight">
+        Log in">
     </h1>
     <div class="text-center">
       <button v-if="!authStore.actor" type="button" @click="login"
-        class="rounded-md bg-highlight px-3.5 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-dullhighlight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-highlight">
-        Log in
+     
       </button>
     </div>
   </div>
@@ -13,6 +13,27 @@
       Please Login to access the app
 
 
+      try {
+        await authStore.login()
+        if (await authStore.isAuthenticated()) {
+          // add notification to the user
+          notificationStore.addNotification({
+            title: 'Login Success!',
+            message: 'You are now logged in',
+            status: 'success'
+          })
+          // redirect to admin page
+          router.push({ name: 'admin' })
+        }
+      } catch (e: any) {
+        // add notification to the user
+        notificationStore.addNotification({
+          title: 'Login Failed',
+          message: e.message,
+          status: 'error'
+        })
+      }
+    }
 <script setup lang="ts">
 import { useAuthStore } from '@/stores/authStore'
 import { useNotificationStore } from '@/stores/useNotificationStore'
@@ -30,27 +51,6 @@ if (await authStore.isAuthenticated()) {
 const login = async (e: Event) => {
   e.preventDefault()
 
-  try {
-    await authStore.login()
-    if (await authStore.isAuthenticated()) {
-      // add notification to the user
-      notificationStore.addNotification({
-        title: 'Login Success!',
-        message: 'You are now logged in',
-        status: 'success'
-      })
-      // redirect to admin page
-      router.push({ name: 'admin' })
-    }
-  } catch (e: any) {
-    // add notification to the user
-    notificationStore.addNotification({
-      title: 'Login Failed',
-      message: e.message,
-      status: 'error'
-    })
-  }
-}
 
 /*
  * SEO
