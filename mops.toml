@@ -1,4 +1,5 @@
 [dependencies]
-base = "0.10.2"
-motoko-hash-map = "https://github.com/ZhenyaUsenko/motoko-hash-map#v8.1.0"
-"uuid.mo" = "https://github.com/aviate-labs/uuid.mo#v0.2.1"
+base = "0.10.4"
+motoko-hash-map = "https://github.com/ZhenyaUsenko/motoko-hash-map#v9.1.0"
+
+"uuid.mo" = "https://github.com/aviate-labs/uuid.mo#v0.2.2"

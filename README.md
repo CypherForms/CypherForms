@@ -62,3 +62,15 @@ Canister ID : qawcx-nqaaa-aaaan-qis2a-cai
 
 ⚠️⚠️⚠️DISCLAIMER :
 This is only Proof of Concept and currently and Should not be used in the Producttion uses an [the proposed vetKD system API on the IC](https://github.com/dfinity/interface-spec/pull/158) in a pre-compiled form. **Do not use this in production or for sensitive data**! This is solely provided **for demonstration purposes only**.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+## Encode Hackathon Updates : 
+
+- 25/01/24 : landing page ready
+![image](https://github.com/CypherForms/CypherForms/assets/115649011/05c9ae02-785b-4e13-a3c8-2359f892648f)
+
+- 27/01/24 : integrated internet identity for app login functionality
+
+- 29/01/24 : Initialized app with vetkd for encryption of forms
+
