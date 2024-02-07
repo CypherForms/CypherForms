@@ -74,3 +74,7 @@ This is only Proof of Concept and currently and Should not be used in the Produc
 
 - 29/01/24 : Initialized app with vetkd for encryption of forms
 
+- 2/01/24 : Solved the annoying bug while implementing vetkd feature
+
+- 8/02/24 : Wrapping up the buidl and submitting the build to encode
+
